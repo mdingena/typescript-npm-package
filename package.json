@@ -1,0 +1,58 @@
+{
+  "name": "typescript-npm-package",
+  "version": "1.0.0",
+  "description": "Template for setting up a new strict TypeScripted project that lets you publish a hybrid ESM/CJS NPM package.",
+  "homepage": "https://github.com/mdingena/typescript-npm-package#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdingena/typescript-npm-package.git"
+  },
+  "keywords": [],
+  "author": "Marc Dingena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdingena/typescript-npm-package/issues"
+  },
+  "scripts": {
+    "prepare": "run-s prepare:*",
+    "prepare:husky": "husky install",
+    "prepare:build": "npm run build",
+    "compile": "tsc --noEmit",
+    "prebuild": "rimraf dist/",
+    "build": "run-p build:*",
+    "build:cjs": "tsc -p tsconfig-cjs.json",
+    "build:esm": "tsc -p tsconfig-esm.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "module": "./dist/esm/index.js",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  }
+}
