@@ -1,6 +1,6 @@
 {
   "name": "typescript-npm-package",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Template for setting up a new strict TypeScripted project that lets you publish a hybrid ESM/CJS NPM package.",
   "homepage": "https://github.com/mdingena/typescript-npm-package#readme",
   "repository": {
@@ -23,7 +23,8 @@
     "build:cjs": "tsc -p tsconfig-cjs.json",
     "build:esm": "tsc -p tsconfig-esm.json",
     "postbuild:cjs": "node ./scripts/postbuild-cjs.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --loader ts-node/esm src/index.ts"
   },
   "engines": {
     "node": ">=14.17.0"
@@ -57,6 +58,7 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.5",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   }
 }
