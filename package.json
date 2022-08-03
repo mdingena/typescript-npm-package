@@ -1,6 +1,6 @@
 {
   "name": "typescript-npm-package",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Template for setting up a new strict TypeScripted project that lets you publish a hybrid ESM/CJS NPM package.",
   "homepage": "https://github.com/mdingena/typescript-npm-package#readme",
   "repository": {
