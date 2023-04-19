@@ -6,7 +6,6 @@
     "esModuleInterop": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
     "lib": ["ES2022", "DOM"],
     "module": "ES2022",
     "moduleResolution": "NodeNext",

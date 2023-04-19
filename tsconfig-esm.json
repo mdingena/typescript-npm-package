@@ -4,6 +4,7 @@
     "declaration": true,
     "declarationDir": "dist/types",
     "declarationMap": false,
-    "outDir": "dist/esm"
+    "outDir": "dist/esm",
+    "verbatimModuleSyntax": true
   }
 }
