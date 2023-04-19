@@ -17,6 +17,8 @@
     "prepare": "run-s prepare:*",
     "prepare:husky": "husky install",
     "prepare:build": "npm run build",
+    "lint": "eslint --fix \"src/**/*.{ts,js}\"",
+    "format": "prettier --write \"+(*.md|src/**/*.{js,ts,json,md})\"",
     "compile": "tsc --noEmit",
     "prebuild": "rimraf dist/",
     "build": "run-p build:*",
