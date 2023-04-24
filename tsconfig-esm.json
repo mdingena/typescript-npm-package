@@ -6,5 +6,6 @@
     "declarationMap": false,
     "outDir": "dist/esm",
     "verbatimModuleSyntax": true
-  }
+  },
+  "include": ["src/**/*"]
 }
